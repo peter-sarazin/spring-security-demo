@@ -116,23 +116,6 @@ div.even {
 }
 
 
-.feature .card
-{
-	background-color: #dddddd
-}
-#features {
-	text-align: center;
-}
-
-#features img {
-	margin: 0 0 20px;
-}
-
-#inputMessage {
-	margin-bottom: 15px;
-}
-
-
 /* --------------------------------------
    Typography
    -------------------------------------- */
@@ -152,14 +135,6 @@ body {
 #loginContainer
 {
 	background-color: #222222;
-}
-
-
-.mainContent
-{
-/* 	background-color : #e0e0e0; */
-/* 	color :  #002868;  */
-	font-weight : 500;	
 }
 
 .error
