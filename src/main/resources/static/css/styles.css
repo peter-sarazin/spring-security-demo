@@ -1,0 +1,360 @@
+
+// Import Bootstrap parts
+@import "../vendor/bootstrap/scss/variables";
+
+// Import "include-media"
+@import "../vendor/include-media/dist/include-media";
+
+// 'include-media' plugging into Bootstrap 4's Grid Breakpoints map
+//
+$breakpoints: $grid-breakpoints;
+
+
+
+div.odd {
+	background-color: #FFFFFF;
+}
+
+div.even {
+	background-color: #D0D0D0;
+}
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+
+
+.stats
+{
+	background-color : #e0e0e0;
+	color :  #002868; 
+	font-weight : 400;	
+}
+
+.mainContentHeading
+{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color : #BF0A30;
+	font-size : 1.75rem;
+	font-weight: 500;	
+}
+
+.qualifier
+{
+	background-color : #d0d0d0;	
+}
+
+
+
+.inputValidationError
+{
+	font-weight: normal;
+	margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545;	
+}
+
+.dark-link
+{
+	color : #888888;
+}
+
+.dark-link:link
+{
+	color : #DDDDDD;
+}
+
+.dark-link:visted
+{
+	color : #DDDDDD;
+}
+
+.dark-link:hover
+{
+	text-decoration: none;
+	color : #DDDDDD;
+}
+
+.dark-link:active
+{
+	text-decoration: none;
+	color : #CCCCCC;
+}
+
+.top-logo
+{
+	padding-top : 20px;
+}
+
+.login-logout
+{
+	padding-left : 15px;
+	padding-top : 10px;
+}
+
+
+@media (min-width: 576px) {
+  .login-logout {
+    float: right;
+    padding-top : 15px;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .date-between-spacer { display: block; }  /* show it on small screens */
+}
+
+
+@media screen and (min-width: 993px) {
+  .date-between-spacer { display: none; }   /* hide it elsewhere */
+}
+
+@media screen and (max-width: 768px) {
+  .date-between-spacer { display: none; }   /* hide it elsewhere */
+}
+
+
+.feature .card
+{
+	background-color: #dddddd
+}
+#features {
+	text-align: center;
+}
+
+#features img {
+	margin: 0 0 20px;
+}
+
+#inputMessage {
+	margin-bottom: 15px;
+}
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+    background: #222222;
+}
+
+.mainContent
+{
+	background-color : #e0e0e0;
+/* 	color :  #002868;  */
+	font-weight : 500;	
+}
+
+
+ul.unstyled {
+	list-style: none;
+	padding: 0;
+}
+
+footer {
+	color: #888888;
+	font-size: 11px;
+	padding: 20px;
+	bottom: 0;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+.red .active a, .red .active a:hover
+{
+    color: #EEEEEE;
+    background-color: #888888;
+}
+
+.nav-pills > .active > a, .nav-pills > .active > a:hover
+{
+	color: #EEEEEE;
+	background-color: #888888;
+}
+
+.nav-pills > .active > span
+{
+	color: #EEEEEE;
+	background-color: #888888;
+}
+
+
+.nav-pills a 
+{
+	color: #AAAAAA;
+}
+
+.nav-pills a:hover
+{
+	color: #EEEEEE;
+}
+
+
+/* #searchInput { */
+/* 	width: 200px; */
+/* } */
+
+/* .navbar-brand { */
+/* 	padding: 13px 15px; */
+/* } */
+   
+   
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+.right.carousel-control, 
+.left.carousel-control 
+{
+     visibility:hidden;
+}
+
+#myCarousel {
+	margin-top: 60px;
+}
+
+.carousel-caption {
+	font-size: 24px;
+}
+
+.carousel-caption h4 {
+	font-size: 32px;
+}
+
+#myCarousel .item { height: 400px; }
+
+#slide1 {
+	background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+}
+
+#slide2 {
+	background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
+}
+
+#slide3 {
+	background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
+}
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+.alert {
+	margin-top: 20px;
+	display: none;
+}
+
+.page-header {
+	padding: 20px;
+}
+
+.tabbable img.thumbnail {
+	margin: 0 20px 10px 0;
+}
+
+.thumbnails {
+	margin: 20px 0;
+}
+
+.thumbnail {
+	position: relative;
+}
+
+.thumbnail h3 {
+	font-size: 16px;
+	margin: 0 0 10px;
+	line-height: 20px;
+}
+
+.thumbnail .price {
+	font-size: 22px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	padding: 10px;
+}
+
+.thumbnail .price sup {
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.thumbnail span.glyphicon {
+	margin-right: 5px;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+	
+	.thumbnail .price {
+		font-size: 14px;
+	}
+	
+	.thumbnail .price sup {
+		font-size: 10px;
+	}
+	
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	
+	#myCarousel .item { height: 310px; }
+	
+	#slide1 {
+		background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../../images/carousel_small_02.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../../images/carousel_small_03.jpg') top center no-repeat;
+	}
+	
+	.carousel-caption {
+		font-size: 16px;
+	}
+	
+	.carousel-caption h4 {
+		font-size: 22px;
+	}
+	
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	#myCarousel .item { height: 500px; }
+	
+	#slide1 {
+		background: url('../../images/carousel_large_01.jpg') top center no-repeat;
+	}
+	
+	#slide2 {
+		background: url('../../images/carousel_large_02.jpg') top center no-repeat;
+	}
+	
+	#slide3 {
+		background: url('../../images/carousel_large_03.jpg') top center no-repeat;
+	}
+
+}
+
+@media (min-width: 768px) {
+	#md-birthdate { display : none }
+}

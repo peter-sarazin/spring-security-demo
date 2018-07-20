@@ -1,0 +1,38 @@
+
+<div th:fragment="top-nav">
+		<div class="row top-header">
+			<div class="col-sm-1">
+			</div>
+			<div class="col-sm-7 top-logo">
+				</div>
+			<div class="col-sm-3">
+			    <div sec:authorize="!isAuthenticated()" class="login-logout">
+			    	<a  th:href="@{/login}" href="#" class="btn btn-success" role="button" aria-pressed="true">Login</a>
+			    </div>
+			    <div sec:authorize="isAuthenticated()" class="login-logout">
+					<a class="dark-link" sec:authentication="principal.username" th:href="@{/userHome}">userName</a>
+					&nbsp;
+					&nbsp;
+			    	<a th:href="@{/logout}" href="#" class="btn btn-danger" role="button" aria-pressed="true">Logout</a>
+			    </div>
+			</div>
+		</div>
+		<br/>
+</div>
+
+<div th:fragment="head">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="css/styles.css" />
+		
+		<style>
+ 			body { 
+/*  			    background: #000000;  */
+ 			}
+		</style>
+
+</div>
