@@ -1,99 +1,95 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<head th:include="fragments/header :: head">
-<title>Demo</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-	<div th:replace="fragments/header :: top-nav">top-nav here</div>
+	<head th:include="fragments/header :: head">
+		<title>Demo</title>
+	</head>
 
-	<div class="container" id="main" style="background: #404040">
-		<nav class="navbar navbar-full navbar-expand-sm navbar-dark">
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarTogglerDemo01"
-				aria-controls="navbarTogglerDemo01" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				<ul class="nav nav-pills red mr-auto mt-2 mt-lg-0">
-					<li class="nav-item active"><span class="nav-link" href="#">Home
-							<span class="sr-only">(current)</span>
-					</span></li>
-					<li class="nav-item"><a class="nav-link" href="#">Item1</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Item2</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Item3</a></li>
-					<li sec:authorize="hasRole( 'ROLE_ADMIN' )" class="nav-item">
-						<a class="nav-link" href="#">Admin</a>
-					</li>
-
-				</ul>
-			</div>
-		</nav>
-		<div sec:authorize="!isAuthenticated()" class="row" id="bigCallout">
-			<div class="col-12">
-
-				<div class="card" style="background-color: #eeeeee">
-					<div class="page-header">
-
-						<h2>Welcome!</h2>
-
-						<p>There are two users that you can login as in this demo:</p>
-						<ul>
-							<li>username: <strong>user</strong>, password: <strong>user</strong></li>
-							<li>username: <strong>admin</strong>, password: <strong>admin</strong></li>
-						</ul>
-						<p>Captain Obvious Says... username user has ROLE_USER, and username admin has role ROLE_ADMIN and ROLE_USER.</p>
-					    <p>
-					    	Go ahead and try it out in addition to looking at the code.
-					    </p>
+	<body>
+	
+		<div th:replace="fragments/header :: top-nav">top-nav here</div>
+	
+		<div class="container" id="main">
+			<nav class="navbar navbar-full navbar-expand-sm navbar-dark">
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarTogglerDemo01"
+					aria-controls="navbarTogglerDemo01" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+					<ul class="nav nav-pills red mr-auto mt-2 mt-lg-0">
+						<li class="nav-item active"><span class="nav-link" href="#">Home
+								<span class="sr-only">(current)</span>
+						</span></li>
+						<li class="nav-item"><a class="nav-link" href="#">Item1</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Item2</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Item3</a></li>
+						<li sec:authorize="hasRole( 'ROLE_ADMIN' )" class="nav-item">
+							<a class="nav-link" href="#">Admin</a>
+						</li>
+	
+					</ul>
+				</div>
+			</nav>
+			<div sec:authorize="!isAuthenticated()" class="row" id="bigCallout">
+				<div class="col-12">
+	
+					<div class="card">
+						<div class="page-header">
+	
+							<h2>Welcome!</h2>
+	
+							<p>There are two users that you can login as in this demo:</p>
+							<ul>
+								<li>username: <strong>user</strong>, password: <strong>user</strong></li>
+								<li>username: <strong>admin</strong>, password: <strong>admin</strong></li>
+							</ul>
+							<p>Captain Obvious Says... username user has ROLE_USER, and
+								username admin has role ROLE_ADMIN and ROLE_USER.</p>
+							<p>Go ahead and try it out in addition to looking at the code.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<br />
-		<div class="row" id="bigCallout">
-			<div class="col-12">
-
-				<div class="card" style="background-color: #eeeeee">
-					<div class="page-header">
-
-						<h2>Purpose</h2>
-
-						<p>
-							The purpose of this demo is to provide an example application implementing Spring Security with the 
-							following stack:
-						</p>
-						<ul>
-							<li>Spring Boot</li>
-							<li>Spring Security</li>
-							<li>Thymeleaf</li>
-							<li>JPA</li>
-							<li>H2 embedded database</li>
-						</ul>
-						
-						<p>
-							Things to note in this demo:
-						</p>
-						<ol>
-							<li>
-								The top nav displays either Login or Logout and the username depending whether or not there 
-								is currently a user who  authenticated successfully.
-							</li>
-							<li>
-								The addition of the Admin item in the navigation, if the user has the admin role.
-							</li>
-						</ol>
+			<br />
+			<div class="row" id="bigCallout">
+				<div class="col-12">
+	
+					<div class="card">
+						<div class="page-header">
+	
+							<h2>Purpose</h2>
+	
+							<p>The purpose of this demo is to provide an example
+								application implementing Spring Security with the following
+								stack:</p>
+							<ul>
+								<li>Spring Boot</li>
+								<li>Spring Security</li>
+								<li>Thymeleaf</li>
+								<li>JPA</li>
+								<li>H2 embedded database</li>
+							</ul>
+	
+							<p>Things to note in this demo:</p>
+							<ol>
+								<li>The top nav displays either Login or Logout and the
+									username depending whether or not there is currently a user who
+									authenticated successfully.</li>
+								<li>The addition of the Admin item in the navigation, if the
+									user has the admin role.</li>
+							</ol>
+						</div>
 					</div>
 				</div>
 			</div>
+			<br />
+	
 		</div>
-		<br />
-
-	</div>
-
-	<div th:replace="fragments/footer :: footer">footer goes here</div>
-
-</body>
+	
+		<div th:replace="fragments/footer :: footer">footer goes here</div>
+	
+	</body>
 </html>

@@ -141,13 +141,30 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizelegibility;
     background: #222222;
+	font-weight : 500;    
 }
+
+.container
+{
+	background-color: #404040;
+}
+
+#loginContainer
+{
+	background-color: #222222;
+}
+
 
 .mainContent
 {
-	background-color : #e0e0e0;
+/* 	background-color : #e0e0e0; */
 /* 	color :  #002868;  */
 	font-weight : 500;	
+}
+
+.error
+{
+	color : red;
 }
 
 
