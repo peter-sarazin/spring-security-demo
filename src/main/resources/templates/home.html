@@ -44,6 +44,7 @@
 							<li>username: <strong>user</strong>, password: <strong>user</strong></li>
 							<li>username: <strong>admin</strong>, password: <strong>admin</strong></li>
 						</ul>
+						<p>Captain Obvious Says... username user has ROLE_USER, and username admin has role ROLE_ADMIN and ROLE_USER.</p>
 					    <p>
 					    	Go ahead and try it out in addition to looking at the code.
 					    </p>
@@ -61,8 +62,8 @@
 						<h2>Purpose</h2>
 
 						<p>
-							The purpose of this demo is to provide an example implementing Spring Security with the following 
-							stack:
+							The purpose of this demo is to provide an example application implementing Spring Security with the 
+							following stack:
 						</p>
 						<ul>
 							<li>Spring Boot</li>
@@ -83,8 +84,13 @@
 							<li>
 								The addition of the Admin item in the navigation, if the user has the admin role.
 							</li>
+							<li>
+								Just for fun... You can access the h2 database console <a href="http://localhost:8080/h2">http://localhost:8080/h2</a>
+								<ul>
+									<li>JDBC URL: <strong>jdbc:h2:~/demo</strong></li>
+								</ul>
+							</li>
 						</ol>
-						
 					</div>
 				</div>
 			</div>

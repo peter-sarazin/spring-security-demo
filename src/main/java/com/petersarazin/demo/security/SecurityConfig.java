@@ -10,6 +10,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration( "securityConfig" )
 @EnableWebSecurity
@@ -40,10 +43,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
 				.antMatchers( "/" ).permitAll()
 				.antMatchers( "/error" ).permitAll()
 				.antMatchers( "/login" ).permitAll()
-				.antMatchers( "/registerNewUser" ).permitAll()
+				.antMatchers( "/h2/**" ).permitAll()
 				.antMatchers( "/css/**" ).permitAll()
 				.antMatchers( "/images/**" ).permitAll()					
 				.anyRequest().authenticated();
+		
+		
+		//
+		// for H2 embedded database console
+		//
+		
+		http
+			.authorizeRequests().antMatchers("/").permitAll()
+			.and().
+			authorizeRequests()
+				.antMatchers("/h2/**").permitAll();
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
+		
 	}
 
     @Autowired

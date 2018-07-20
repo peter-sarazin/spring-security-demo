@@ -10,8 +10,6 @@ public class UserHomeController
 	@RequestMapping( "/userHome" )
 	public ModelAndView userHome()
 	{
-		// TODO: fetch the user profile
-		
 		return new ModelAndView( "userHome" );
 	}
 
