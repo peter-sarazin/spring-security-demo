@@ -137,6 +137,10 @@ body {
 	background-color: #222222;
 }
 
+.page-header {
+	padding: 20px;
+}
+
 .error
 {
 	color : red;
@@ -159,12 +163,6 @@ footer {
    Navbar
    -------------------------------------- */
 
-.red .active a, .red .active a:hover
-{
-    color: #EEEEEE;
-    background-color: #888888;
-}
-
 .nav-pills > .active > a, .nav-pills > .active > a:hover
 {
 	color: #EEEEEE;
@@ -186,101 +184,6 @@ footer {
 .nav-pills a:hover
 {
 	color: #EEEEEE;
-}
-
-
-/* #searchInput { */
-/* 	width: 200px; */
-/* } */
-
-/* .navbar-brand { */
-/* 	padding: 13px 15px; */
-/* } */
-   
-   
-/* --------------------------------------
-   Carousel
-   -------------------------------------- */
-
-.right.carousel-control, 
-.left.carousel-control 
-{
-     visibility:hidden;
-}
-
-#myCarousel {
-	margin-top: 60px;
-}
-
-.carousel-caption {
-	font-size: 24px;
-}
-
-.carousel-caption h4 {
-	font-size: 32px;
-}
-
-#myCarousel .item { height: 400px; }
-
-#slide1 {
-	background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
-}
-
-#slide2 {
-	background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
-}
-
-#slide3 {
-	background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
-}
-
-
-/* --------------------------------------
-   Global Styles
-   -------------------------------------- */
-
-.alert {
-	margin-top: 20px;
-	display: none;
-}
-
-.page-header {
-	padding: 20px;
-}
-
-.tabbable img.thumbnail {
-	margin: 0 20px 10px 0;
-}
-
-.thumbnails {
-	margin: 20px 0;
-}
-
-.thumbnail {
-	position: relative;
-}
-
-.thumbnail h3 {
-	font-size: 16px;
-	margin: 0 0 10px;
-	line-height: 20px;
-}
-
-.thumbnail .price {
-	font-size: 22px;
-	position: absolute;
-	top: -10px;
-	right: -10px;
-	padding: 10px;
-}
-
-.thumbnail .price sup {
-	font-weight: normal;
-	font-size: 12px;
-}
-
-.thumbnail span.glyphicon {
-	margin-right: 5px;
 }
 
 
