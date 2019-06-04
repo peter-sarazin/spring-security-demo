@@ -3,6 +3,25 @@
    build:
      docker:
        - image: circleci/openjdk:8-jdk
+       
+     working_directory: ~/sping-security-demo
+     
      steps:
+       #git pull
        - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - sping-security-demo-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: sping-security-demo-{{ checksum "pom.xml" }}
+        
+      # package into a jar
+       
        - run: mvn clean package
