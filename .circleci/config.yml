@@ -6,5 +6,3 @@
      steps:
        - checkout
        - run: mvn clean package
-       - store_artifacts:
-          path: target/classes
