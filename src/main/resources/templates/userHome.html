@@ -41,7 +41,7 @@
 							<h2>
 								Welcome <span sec:authentication="principal.username">username</span>!
 							</h2>
-							<p>This is a simple the landing page used to demonstrate when
+							<p>This is a simple landing page used to demonstrate when
 								the user has logged in successfully.</p>
 							<p sec:authorize="hasRole( 'ROLE_ADMIN' )">
 								<strong>PLEASE NOTE:</strong> This user has the role of admin,
